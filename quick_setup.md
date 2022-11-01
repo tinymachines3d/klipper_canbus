@@ -20,8 +20,9 @@ iface can0 can static
  pre-up ip link set can0 type can bitrate 500000
  pre-up ip link set can0 txqueuelen 1024
  ```
+ 
+   Press <kbd>Ctrl</kbd>+<kbd>X</kbd> to save.
 
-   Exit using <kbd>ESC</kbd> or <kbd>Q</kbd>, confirm with <kbd>Y</kbd> then <kbd>enter</kbd>
 
 
 You can now reboot the pi with ` sudo reboot `
@@ -46,7 +47,6 @@ The key thing to note is that the network is **UP** for now.
 1. clone the CanBoot repository to your pi  
     >```bash
     >cd ~/
-    >
     >cd CanBoot
     >```
 
@@ -56,7 +56,6 @@ If no dir exists, go to step 2. If dir exists, go to step 3.
 2. clone the CanBoot repository to your pi  
     >```bash
     >cd ~/
-    >
     >git clone https://github.com/Arksine/CanBoot
     >```
 
@@ -67,14 +66,14 @@ If no dir exists, go to step 2. If dir exists, go to step 3.
     >make menuconfig
     >```
 
-5. Configure your makefile for the **EBB 36 / 42 v1.1/v1.2 with STM32G0B1**
+4. Configure your makefile for the **EBB 36 / 42 v1.1/v1.2 with STM32G0B1**
    
 ![image](https://user-images.githubusercontent.com/28379694/199145678-1e9bfa05-c0ee-4715-b83d-38a19700cd2b.png)
 
     
-    Exit using <kbd>ESC</kbd> or <kbd>Q</kbd>, confirm with yes(<kbd>Y</kbd>)
+   Exit using <kbd>ESC</kbd> or <kbd>Q</kbd>, confirm with yes(<kbd>Y</kbd>)
 
-6. Build the firmware
+5. Build the firmware
     >```bash
     >make clean
     >
@@ -181,3 +180,5 @@ If no dir exists, go to step 2. If dir exists, go to step 3.
     >```bash
     >"Found canbus_uuid=XXXXXXXXXX, Application: Klipper"
     >```
+## Add canbus_uuid to printer.cfg
+![image](https://user-images.githubusercontent.com/28379694/199154237-917828db-cb2f-49ad-8114-876f55bbdcb5.png)
