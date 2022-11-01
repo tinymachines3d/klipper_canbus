@@ -7,10 +7,15 @@
 ### *add 10a auto fuse inline from PSU to U2C 24V*
 
 
-## **PI Setup**
-Connect to the printer you are flashing
+## **Can Network Setup**
+The process below will set the baud rate for the Can Network. If this does not match the firmware that gets flashed to the tool board, it will not connect. 
+
+1. Connect to the printer you are flashing over SSH (Putty)
+2. Enter the following command
 
 ` sudo nano /etc/network/interfaces.d/can0 `
+
+3. Change the values to match below. 
 
 ```bash
 auto can0
@@ -21,23 +26,13 @@ iface can0 can static
  pre-up ip link set can0 txqueuelen 1024
  ```
  
-   Press <kbd>Ctrl</kbd>+<kbd>X</kbd> to save.
-
+   Press <kbd>Ctrl</kbd>+<kbd>X</kbd> then confirm with <kbd>Enter</kbd> to save.
 
 
 You can now reboot the pi with ` sudo reboot `
 
 
-## Test the network
-
-
-Once the pi has rebooted, run `ip -s link show can0` to check your network status.
-
-You should see a line like below in the results.
-The key thing to note is that the network is **UP** for now.
-
-![image](https://user-images.githubusercontent.com/28379694/199144380-fcab121e-6f2c-449f-a3b5-62d6b40992f2.png)
-
+![../images/iplink.png](../images/iplink.png)
 
 # Flashing the canboot firmware via DFU on EBB36/42 (ST32G0B1)
 
@@ -180,13 +175,18 @@ If no dir exists, go to step 2. If dir exists, go to step 3.
     >```bash
     >"Found canbus_uuid=XXXXXXXXXX, Application: Klipper"
     >```
-## Add canbus_uuid to printer.cfg
-![image](https://user-images.githubusercontent.com/28379694/199154237-917828db-cb2f-49ad-8114-876f55bbdcb5.png)
+
+
+## Add serial + canbus_uuid to printer.cfg
+Make sure printer is online by going to network tab and type IP into browswer. Go to Machine > printer.cfg
+![image](https://user-images.githubusercontent.com/28379694/199355555-47d15df4-cefc-4a75-a2bf-126293309319.png)
 
 ## **Update G-Code Shell Command**
+1. If you get the following error in Mainsail
+![image](https://user-images.githubusercontent.com/28379694/199357015-f287b14f-0336-49be-8604-09949841aa6c.png)
 
-Open Kiauh  
-    >```bash
+2. Open Kiauh, if asked to update <kbd>Y</kbd> then press <kbd>↑</kbd> then <kbd>Enter</kbd> to restart Kiauh. 
+    >```
     >cd ~/
     >./kiauh/kiauh.sh
     >```
