@@ -167,7 +167,7 @@ If no dir exists, go to step 2. If dir exists, go to step 3.
     ![image](https://user-images.githubusercontent.com/28379694/199145395-ea3565e4-12d2-4ce8-8413-8ad766936b28.png)
 
 
-    If all is well you now have a klipper firmware on your SHT.
+    If everything worked properly, klipper is on the toolboard!
 
     To verify this you can query the canbus uuid with 
 
