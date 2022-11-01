@@ -21,7 +21,7 @@ you can now reboot the pi with ` sudo reboot `
 
 ## Test the network
 
-Once the pi has rebooted you can run the `ip -s link show can0` command to check your network status.
+Once the pi has rebooted, run `ip -s link show can0` to check your network status.
 
 You should see a line like below in the results.
 The key thing to note is that the network is **UP** for now.
