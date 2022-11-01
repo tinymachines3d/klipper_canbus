@@ -26,4 +26,4 @@ Once the pi has rebooted you can run the `ip -s link show can0` command to check
 You should see a line like below in the results.
 The key thing to note is that the network is **UP** for now.
 
-![../images/iplink.png](../images/iplink.png)
+![image](https://user-images.githubusercontent.com/28379694/199144380-fcab121e-6f2c-449f-a3b5-62d6b40992f2.png)
