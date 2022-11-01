@@ -182,3 +182,15 @@ If no dir exists, go to step 2. If dir exists, go to step 3.
     >```
 ## Add canbus_uuid to printer.cfg
 ![image](https://user-images.githubusercontent.com/28379694/199154237-917828db-cb2f-49ad-8114-876f55bbdcb5.png)
+
+![image](https://user-images.githubusercontent.com/28379694/199354454-f9f59389-f880-4d13-b907-51511cdea5a7.png) ![image](https://user-images.githubusercontent.com/28379694/199354495-adffdd7e-2b04-406b-b139-e004e5590ca3.png) ![image](https://user-images.githubusercontent.com/28379694/199354543-16d85b0f-9b28-46e6-8219-9d2087e77047.png)
+
+## **Update G-Code Shell Command**
+
+1. clone the CanBoot repository to your pi  
+    >```bash
+    >cd ~/
+    >./kiauh/kiauh.sh
+    >```
+
+
