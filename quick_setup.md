@@ -132,6 +132,9 @@ If no dir exists, go to step 2. If dir exists, go to step 3.
     >```bash
     >"Found canbus_uuid=XXXXXXXXXX, Application: CanBoot"
     >```
+## Copy the canbus_uuid data and Serial ID  
+
+Paste into a notepad file to use in later steps. Run ```ls /dev/serial/by-id/*``` to get the MCU serial.  
 
 
 10. Assuming the above gave you a UUID you can now flash Klipper to your board via CanBoot... (if not see the troubleshooting section [here](../troubleshooting.md))
