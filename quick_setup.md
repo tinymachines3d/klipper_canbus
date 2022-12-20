@@ -7,7 +7,7 @@
 ### *add 10a auto fuse inline from PSU to U2C 24V*
 
 
-## **Network Setup**
+## **CAN Network Setup**
 The process below will set the baud rate for the Can Network. If this does not match the firmware that gets flashed to the tool board, it will not connect. 
 
 1. Connect to the printer you are flashing over SSH (Putty)
@@ -34,10 +34,10 @@ You can now reboot the pi with ` sudo reboot `
 
 ![../images/iplink.png](../images/iplink.png)
 
-# Flashing the canboot firmware via DFU on EBB36/42 (ST32G0B1)
+# Flashing the CanBoot firmware via DFU on EBB36/42 (ST32G0B1)
 
 
-## **Generate the CANboot firmware file**
+## **Generate the CanBoot firmware file**
 
 1. clone the CanBoot repository to your pi  
     >```bash
