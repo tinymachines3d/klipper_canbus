@@ -7,7 +7,7 @@
 ### *add 10a auto fuse inline from PSU to U2C 24V*
 
 
-## **Can Network Setup**
+## **Network Setup**
 The process below will set the baud rate for the Can Network. If this does not match the firmware that gets flashed to the tool board, it will not connect. 
 
 1. Connect to the printer you are flashing over SSH (Putty)
